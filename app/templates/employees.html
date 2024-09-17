@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>№</th>
+        <th>Ім'я</th>
+        <th>Призвіще</th>
+        <th>Вік</th>
+        <th>Посада</th>
+        <th>Зепеха</th>
+    </tr>
+    {% for employee in employees %}
+    <tr>
+        {% for item in employee %}
+            <td>{{ item }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}
